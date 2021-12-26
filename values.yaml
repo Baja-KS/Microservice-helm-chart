@@ -1,0 +1,10 @@
+service:
+  targetPort: "8080"
+  #port
+
+deployment:
+  #containerNAme
+  #repo
+  #tag
+  replicaCount: 1
+
