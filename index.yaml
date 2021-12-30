@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  microservice:
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2021-12-29T17:42:28.471463053+01:00"
+    description: A Helm chart for Kubernetes
+    digest: c18bc033a4cb93a8c79dc3c6d4ff29a18ef66a537fd345f8d584e48626a868b5
+    name: microservice
+    type: application
+    urls:
+    - https://baja-ks.github.io/Helm/stable/microservice-1.0.0.tgz
+    version: 1.0.0
+generated: "2021-12-29T17:42:28.470874043+01:00"
