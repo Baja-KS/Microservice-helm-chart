@@ -1,16 +1,16 @@
 apiVersion: apps/v1
-{{- if eq .Values.stateful }}
+{{- if .Values.stateful }}
 kind: StatefulSet
 {{- else }}
 kind: Deployment
 {{ end }} 
 metadata:
-  name: {{ .Values.name  }}{{- if eq .Values.stateful }}-ss {{- end}}
+  name: {{ .Values.name  }}{{- if .Values.stateful }}-ss {{- end }}
   labels:
     app: {{ .Values.name }}
 spec:
   replicas: {{ .Values.deployment.replicaCount }}
-  {{- if eq .Values.stateful }}
+  {{- if .Values.stateful }}
   serviceName: {{ .Values.name }}-service
   volumeClaimTemplates:
     - metadata:
@@ -40,7 +40,7 @@ spec:
                 secretKeyRef:
                   name: {{ .Values.name }}-secret
                   key: jwt-key
-            {{- if ne .Values.stateful }}
+            {{- if not .Values.stateful }}
             - name: SEED_IF_EMPTY
               valueFrom:
                 configMapKeyRef:
@@ -86,6 +86,3 @@ spec:
             - name: {{ .name }}
               value: {{ .value }}
             {{ end }}
-
-
-
