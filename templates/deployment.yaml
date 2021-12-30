@@ -5,7 +5,7 @@ kind: StatefulSet
 kind: Deployment
 {{ end }} 
 metadata:
-  name: {{ .Values.name  }}{{- if .Values.stateful }}-ss {{- end }}
+  name: {{ .Values.name  }}{{- if .Values.stateful }}-ss {{- end}}
   labels:
     app: {{ .Values.name }}
 spec:
@@ -16,7 +16,8 @@ spec:
     - metadata:
         name: {{ .Values.name }}-vol
       spec:
-        accessModes: [ "ReadWriteOnce" ]
+        accessModes:
+          - ReadWriteOnce 
         resources:
           requests:
             storage: 100Mi
@@ -31,7 +32,7 @@ spec:
     spec:
       containers:
         - name: {{ .Values.deployment.containerName }}
-          image: {{ .Values.deployment.repo }}:{{ .Values.deployment.tag }}
+          image: "{{ .Values.deployment.repo }}:{{ .Values.deployment.tag }}"
           ports:
             - containerPort: {{ .Values.service.targetPort }}
           env:
