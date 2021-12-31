@@ -1,0 +1,6 @@
+dependencies:
+- name: postgresdb
+  repository: https://baja-ks.github.io/Helm/stable
+  version: 1.0.0
+digest: sha256:430ccf8a9510ad4148198d4a33ccafc13e0ab3bc586e987a4d5df5c44c6a115a
+generated: "2021-12-31T15:11:17.971920524+01:00"

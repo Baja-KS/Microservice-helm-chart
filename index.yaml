@@ -3,7 +3,32 @@ entries:
   microservice:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2021-12-30T18:20:16.913855789+01:00"
+    created: "2021-12-31T15:11:42.376871085+01:00"
+    dependencies:
+    - condition: postgresdb.enabled
+      name: postgresdb
+      repository: https://baja-ks.github.io/Helm/stable
+      version: 1.0.0
+    description: A Helm chart for Kubernetes
+    digest: 93d3861ee2354bb5d314a19b9f85f58beedd9ad5d8608b90d364182d47675120
+    name: microservice
+    type: application
+    urls:
+    - https://baja-ks.github.io/Helm/stable/microservice-1.1.0.tgz
+    version: 1.1.0
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2021-12-31T15:11:42.368875888+01:00"
+    description: A Helm chart for Kubernetes
+    digest: c6737b068f0e6f0ae25a702b55b6993579543672ed3984d65d3fd773a4603aaf
+    name: microservice
+    type: application
+    urls:
+    - https://baja-ks.github.io/Helm/stable/microservice-1.0.3.tgz
+    version: 1.0.3
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2021-12-31T15:11:42.364009941+01:00"
     description: A Helm chart for Kubernetes
     digest: 0487f2176fdab175c33d58276fd952cdd513c65e7cc7f1ee11f5f6bb96104629
     name: microservice
@@ -13,7 +38,7 @@ entries:
     version: 1.0.2
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2021-12-30T18:20:16.912431589+01:00"
+    created: "2021-12-31T15:11:42.362066884+01:00"
     description: A Helm chart for Kubernetes
     digest: f96195fe223285abcfc28e81f64b911bb5229b6949d9a3bf7d1a9cca714a62f6
     name: microservice
@@ -23,7 +48,7 @@ entries:
     version: 1.0.1
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2021-12-30T18:20:16.910943366+01:00"
+    created: "2021-12-31T15:11:42.359777739+01:00"
     description: A Helm chart for Kubernetes
     digest: c18bc033a4cb93a8c79dc3c6d4ff29a18ef66a537fd345f8d584e48626a868b5
     name: microservice
@@ -31,4 +56,26 @@ entries:
     urls:
     - https://baja-ks.github.io/Helm/stable/microservice-1.0.0.tgz
     version: 1.0.0
-generated: "2021-12-30T18:20:16.910077637+01:00"
+  postgres-db:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2021-12-31T15:08:02.031149614+01:00"
+    description: Quick config postgresql
+    digest: 8e15461689af211343ff1225fc3408fdab7585122eb59d520ee32ae6b83375cd
+    name: postgres-db
+    type: application
+    urls:
+    - https://baja-ks.github.io/Helm/stable/postgres-db-1.0.0.tgz
+    version: 1.0.0
+  postgresdb:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2021-12-31T15:11:42.377365545+01:00"
+    description: Quick config postgresql
+    digest: 4eb9c8b471910500a3d46806df2b9cde20de67fa0e12e841b4ca579cedc82846
+    name: postgresdb
+    type: application
+    urls:
+    - https://baja-ks.github.io/Helm/stable/charts/postgresdb-1.0.0.tgz
+    version: 1.0.0
+generated: "2021-12-31T15:11:42.358612235+01:00"

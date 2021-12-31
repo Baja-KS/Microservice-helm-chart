@@ -1,6 +1,8 @@
 #stateful:
 #host:
 #path:
+#postgres-db:
+#  enabled: true
 service:
   targetPort: "8080"
   #port
